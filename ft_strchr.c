@@ -25,8 +25,6 @@ int main ()
     ptr = strchr( str, ch);  
     printf (" The first occurrence of the '%c' in '%s' string  is: '%s' ", ch, str, ptr);
 
-    printf("\n\n\n\n\n");
-
     char *pt;
     pt = ft_strchr(str, ch);
     printf (" The first occurrence of the '%c' in '%s' string  is: '%s' ", ch, str, pt);
