@@ -16,20 +16,20 @@ void ft_memset(void *str, int c ,size_t n)
     }
 }
 
-#include <string.h>
-#include <stdio.h>
+// #include <string.h>
+// #include <stdio.h>
 
-int main(void)
-{
-    char test[50];
-    strcpy(test,"This is string.h library function");
-    puts(test);
-    memset(test, '$' ,60);
-    puts(test);
+// int main(void)
+// {
+//     char test[50];
+//     strcpy(test,"This is string.h library function");
+//     puts(test);
+//     memset(test, '$' ,60);
+//     puts(test);
 
-    char t[50];
-    strcpy(t,"This is string.h library function");
-    puts(t);
-    ft_memset(t,'$',60);
-    puts(t);
-}
+//     char t[50];
+//     strcpy(t,"This is string.h library function");
+//     puts(t);
+//     ft_memset(t,'$',60);
+//     puts(t);
+// }

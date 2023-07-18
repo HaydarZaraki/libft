@@ -9,7 +9,7 @@ char *ft_strrchr(const char *str, int c)
 
     // Iterate over the string in reverse order
     while (ptr >= str) {
-        if (*ptr == c)
+        if (*ptr == (unsigned char) c)
         {
             return (char *) ptr;
         }
@@ -18,22 +18,22 @@ char *ft_strrchr(const char *str, int c)
     return 0;
 }
 
-#include <stdio.h>  
-#include <string.h>  
-int main ()  
-{  
-    const char str[] = "Use strchr() function in C.";  
-    const char ch = 's'; // it is searched in str[] array
-    char *ptr; // declare character pointer ptr  
+// #include <stdio.h>  
+// #include <string.h>  
+// int main ()  
+// {  
+//     const char str[] = "Use strchr() function in C.";  
+//     const char ch = 's'; // it is searched in str[] array
+//     char *ptr; // declare character pointer ptr  
       
-    printf (" Original string is: %s \n", str);  
-    // use strchr() function and pass str in which ch is to be searched  
-    ptr = strrchr( str, ch);  
-    printf ("string  is: '%s' ", ptr);
+//     printf (" Original string is: %s \n", str);  
+//     // use strchr() function and pass str in which ch is to be searched  
+//     ptr = strrchr( str, ch);  
+//     printf ("string  is: '%s' ", ptr);
 
-    char *pt;
-    pt = ft_strrchr(str, ch);
-    printf ("string  is: '%s' ", pt);
+//     char *pt;
+//     pt = ft_strrchr(str, ch);
+//     printf ("string  is: '%s' ", pt);
     
-    return 0;  
-}
+//     return 0;  
+// }

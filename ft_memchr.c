@@ -5,10 +5,9 @@ void *ft_memchr(const void *str, int c, size_t n)
     char *ptr = (char *) str;
     size_t i;
     i = 0;
-
-    while (*ptr != '\0' && i < n)
+    while (i < n)
     {
-        if (*ptr == c)
+        if (*ptr == (unsigned char) c)
         {
             return ptr;
         }
@@ -18,23 +17,24 @@ void *ft_memchr(const void *str, int c, size_t n)
     return 0;
 }
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int main ()
-{
-    const char str[] = "http://www.tutorialspoint.com";
-    const char ch = '.';
-    char *ret;
+// int main ()
+// {
+//     // const char str[] = "http://www.tutorialspoint.com";
+//     const char ch = 't';
+//     char str[] = {0, 1, 2 ,3 ,4 ,5};
+//     char *ret;
 
-    ret = memchr(str, ch, 11);
+//     ret = memchr(str, 2 + 256, 3);
 
-    printf("String after |%c| is - |%s|\n", ch, ret);
+//     printf("String |%s|\n",ret);
 
-    char *ter;
+//     char *ter;
 
-    ter = ft_memchr(str, ch, 11);
-    printf("String after |%c| is - |%s|\n", ch, ter);
+//     ter = ft_memchr(str, 2 + 256, 3);
+//     printf("String |%s|\n",ter);
 
-    return(0);
-}
+//     return(0);
+// }

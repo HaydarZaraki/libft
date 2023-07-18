@@ -16,14 +16,14 @@ void ft_bzero(void *str, size_t n)
     }
 }
 
-#include <strings.h>
-#include <stdio.h>
+// #include <strings.h>
+// #include <stdio.h>
 
-int main(void)
-{
-    // char *test = malloc(1);
-    // bzero(test, 5);
+// int main(void)
+// {
+//     // char *test = malloc(1);
+//     // bzero(test, 5);
 
-    char *t = malloc(4);
-    ft_bzero(t, 5);
-}
+//     char *t = malloc(4);
+//     ft_bzero(t, 5);
+// }
