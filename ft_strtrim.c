@@ -1,23 +1,24 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include<string.h>
+#include <libft.h>
 
-char *ft_strchr(const char *str, int c)
-{
-    while (*str != '\0')
-    {
-        if (*str == (unsigned char) c)
-        {
-            return (char *) str;
-        }
-        str++;
-    }
-    if (*str == '\0' && c == 0)
-    {
-        return (char *) str;
-    }
-    return 0;
-}
+// char *ft_strchr(const char *str, int c)
+// {
+//     while (*str != '\0')
+//     {
+//         if (*str == (unsigned char) c)
+//         {
+//             return (char *) str;
+//         }
+//         str++;
+//     }
+//     if (*str == '\0' && c == 0)
+//     {
+//         return (char *) str;
+//     }
+//     return 0;
+// }
 
 
 char *ft_strtrim(char const *s1, char const *set)
