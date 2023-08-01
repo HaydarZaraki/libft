@@ -1,39 +1,38 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
-{   
-    size_t le = len - start;
-    if (len < start)
+int    ft_strlen(char *str)
+{
+    int    i;
+    i = 0;
+    while (str[i] != '\0')
     {
-        return (char *) s;
+        i++;
     }
-    char *dest = malloc(sizeof(char) * (le + 1));
-    char *first;
-    if (dest != NULL)
-    {
-        first = dest;
-        while(start < len && (s[start] != '\0'))
-        {
-            *dest = s[start];
-            start++;
-            dest++;
-        }
-        *dest = '\0';
-        return first;
-    }
-    return 0;
+    return (i);
 }
 
-// int main()
-// {
-//     // char src[] = "substr function Implementation";
- 
-//     // int m = 7;
-//     // int n = 12;
- 
-//     char* dest = ft_substr("tripouille", 100, 1);
-//     printf("%s",dest);
- 
-//     return (0);
-// }
+char* ft_substr(const char* s, int start, int len) {
+    int string_len;
+    string_len = ft_strlen((char *) s);
+    if (start < 0 || start >= string_len || len <= 0) {
+        char* empty = (char*)malloc(sizeof(char));
+        *empty = '\0';
+        return empty;
+    }
+    if (len > (string_len - start)) {
+        len = string_len - start; // Trim if it exceed the string length
+    }
+    char* result = (char*)malloc((len + 1) * sizeof(char));
+    if (result == NULL) {
+        return NULL;
+    }
+    int i;
+    i = 0;
+    while(i < len) {
+        result[i] = s[start + i];
+        i++;
+    }
+    result[len] = '\0';
+    return result;
+}
