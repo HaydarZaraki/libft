@@ -10,7 +10,7 @@ void *ft_calloc(size_t nitems, size_t size)
     // size_t s = (unsigned) size;
     // size_t n = (unsigned) nitems;
     p = malloc(nitems * size);
-    if ( p == NULL ) 
+    if ( p == NULL )
     {
         return 0;
     }
