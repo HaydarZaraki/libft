@@ -1,20 +1,10 @@
-#include <stdlib.h>
+#include "libft.h"
 
-int    ft_strlen(char *str)
-{
-    int    i;
-    i = 0;
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
-}
-
-char* ft_substr(const char* s, int start, int len) {
-    int string_len;
+char *ft_substr(char const *s, unsigned int start, size_t len)
+ {
+    unsigned int string_len;
     string_len = ft_strlen((char *) s);
-    if (start < 0 || start >= string_len || len <= 0) {
+    if (start >= string_len || len <= 0) {
         char* empty = (char*)malloc(sizeof(char));
         *empty = '\0';
         return empty;
@@ -26,7 +16,7 @@ char* ft_substr(const char* s, int start, int len) {
     if (result == NULL) {
         return NULL;
     }
-    int i;
+    unsigned int i;
     i = 0;
     while(i < len) {
         result[i] = s[start + i];

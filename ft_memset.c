@@ -1,11 +1,10 @@
 #include <stdlib.h>
 
-void ft_memset(void *str, int c ,size_t n)
+void *ft_memset(void *str, int c ,size_t n)
 {
+    char *ptr = (char *)str;
     if (str != NULL && n > 0)
     {
-
-        char *ptr = (char *)str;
         size_t i;
         i = 0;
         while (i < n)
@@ -14,6 +13,7 @@ void ft_memset(void *str, int c ,size_t n)
             i++;
         }
     }
+    return ptr;
 }
 
 // #include <string.h>

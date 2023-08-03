@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include "libft.h"
 
 int	len(long n)
 {
@@ -19,19 +19,17 @@ int	len(long n)
 	}
 	return(len);
 }
+
 char	*ft_itoa(int num)
 {
 	char	*str;
 	long	n;
 	int	i;
-
 	n = num;
 	i = len(n);
 	str = (char *)malloc(i + 1);
-    if (str == NULL)
-    {
+	if (str == NULL)
 		return(NULL);
-    }
 	str[i--] = '\0';
 	if (n == 0)
 	{
