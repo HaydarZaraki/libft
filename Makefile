@@ -30,7 +30,8 @@ SRCS	= ft_strlen.c \
 		ft_strncmp.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
-		ft_atoi.c
+		ft_atoi.c \
+		ft_split.c
 
 OBJS	= ${SRCS:.c=.o}
 NAME	= libft.a
