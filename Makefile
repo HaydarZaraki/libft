@@ -33,7 +33,14 @@ SRCS	= ft_strlen.c \
 		ft_atoi.c \
 		ft_split.c
 
-OBJS	= ${SRCS:.c=.o}
+BONUS = ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c
+
+OBJS	= ${SRCS:.c=.o} 
+OBJ_BONUS = ${BONUS:.c=.o}
 NAME	= libft.a
 LIBC	= ar rc
 LIBR	= ranlib
@@ -48,12 +55,16 @@ ${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}
 	${LIBR} ${NAME}
 
-all: ${NAME}
+
+bonus: ${NAME} ${OBJ_BONUS}
+		${LIBC} ${NAME} ${OBJ_BONUS}
+
+all: ${NAME} ${bonus}
 
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${OBJ_BONUS}
 
 fclean: clean
-	${RM} ${NAME}
+	${RM} ${NAME} ${bonus}
 
 re: fclean all
