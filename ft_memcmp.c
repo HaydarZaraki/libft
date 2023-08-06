@@ -1,25 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: helgayli <helgayli@student.42abudhabi.a    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/06 22:26:53 by helgayli          #+#    #+#             */
+/*   Updated: 2023/08/06 22:31:16 by helgayli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int ft_memcmp(const void *str1, const void *str2, size_t n)
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-    unsigned char *s1 = (unsigned char *) str1;
-    unsigned char *s2 = (unsigned char *) str2;
+	unsigned char	*s1;
+	unsigned char	*s2;
+	size_t			i;
 
-    size_t i;
-    i = 0;
-    while (i < n)
-    {
-        if (s1[i] != s2[i])
-        {
-            return s1[i] - s2[i];
-        }
-        else
-        {
-            i++;
-        }
-        
-    }
-    return 0;    
+	s1 = (unsigned char *)str1;
+	s2 = (unsigned char *)str2;
+	i = 0;
+	while (i < n)
+	{
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
+		else
+		{
+			i++;
+		}
+	}
+	return (0);
 }
 
 // #include <string.h>
@@ -52,6 +65,5 @@ int ft_memcmp(const void *str1, const void *str2, size_t n)
 //       printf("\nstr1 is equal to str2");
 //    }
 
-   
 //    return(0);
 // }

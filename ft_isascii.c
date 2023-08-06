@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: helgayli <helgayli@student.42abudhabi.a    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/06 21:41:56 by helgayli          #+#    #+#             */
+/*   Updated: 2023/08/06 21:42:26 by helgayli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // #include <stdio.h>
 // #include <ctype.h>
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-        if (c >= 0 && c <= 127)
-                return 1;
-        else
-                return 0;
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }
 
 // int main(void)

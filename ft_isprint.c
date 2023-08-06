@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: helgayli <helgayli@student.42abudhabi.a    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/06 21:43:20 by helgayli          #+#    #+#             */
+/*   Updated: 2023/08/06 21:43:48 by helgayli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // #include <stdio.h>
 // #include <ctype.h>
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-        if ((c >= 0 && c <= 31) || c >= 127)
-                return 0;
-        else
-                return 1;
+	if ((c >= 0 && c <= 31) || c >= 127)
+		return (0);
+	else
+		return (1);
 }
 
 // int main(void)
