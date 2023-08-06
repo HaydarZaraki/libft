@@ -2,15 +2,27 @@
 
 void ft_putnbr_fd(int n, int fd)
 {
-        char *num;
-        num = ft_itoa(n);
-        if (*num == '\0')
+        // char *str;
+        // str = ft_itoa(n);
+        // ft_putstr_fd(str, fd);
+        // free(str);
+
+        long num;
+        num = n;
+
+        if (num < 0)
         {
-                write(fd, "", 1);
+                write(fd, "-", 1);
+                num *= -1;
         }
-        while (*num != '\0')
+        if (num > 9)
         {
-                write(fd, num, 1);
-                num++;
+                ft_putnbr_fd(num / 10, fd);
+                ft_putnbr_fd(num % 10, fd);
+        }
+        else
+        {
+                num += 48;
+                write(fd, &num, 1);
         }
 }
