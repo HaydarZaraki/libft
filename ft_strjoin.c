@@ -6,7 +6,7 @@
 /*   By: helgayli <helgayli@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 23:26:15 by helgayli          #+#    #+#             */
-/*   Updated: 2023/08/07 00:33:12 by helgayli         ###   ########.fr       */
+/*   Updated: 2023/08/07 19:12:11 by helgayli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		l1;
 	int		l2;
-	char	*first;
 	char	*joined;
 
 	l1 = ft_strlen((char *)s1);
 	l2 = ft_strlen((char *)s2);
 	joined = malloc(l1 + l2 + 1);
-	first = joined;
 	if (joined != 0)
 	{
 		join_op((char *)s1, joined, (char *)s2);
-		return (first);
+		return (joined);
 	}
 	return (0);
 }

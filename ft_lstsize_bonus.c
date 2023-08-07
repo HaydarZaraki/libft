@@ -6,7 +6,7 @@
 /*   By: helgayli <helgayli@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 22:22:51 by helgayli          #+#    #+#             */
-/*   Updated: 2023/08/06 22:24:33 by helgayli         ###   ########.fr       */
+/*   Updated: 2023/08/07 17:45:44 by helgayli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	t_list	*duplicate;
 	int		i;
 
-	duplicate = lst;
 	i = 0;
-	while (duplicate != NULL)
+	while (lst != NULL)
 	{
-		duplicate = duplicate->next;
+		lst = lst->next;
 		i++;
 	}
 	return (i);
