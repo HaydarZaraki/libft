@@ -6,7 +6,7 @@
 /*   By: helgayli <helgayli@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 20:53:00 by helgayli          #+#    #+#             */
-/*   Updated: 2023/08/07 17:43:48 by helgayli         ###   ########.fr       */
+/*   Updated: 2023/08/07 23:29:30 by helgayli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *str)
 {
-	long	i;
+	int		i;
 	int		sign;
 	int		result;
 
