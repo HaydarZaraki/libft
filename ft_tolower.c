@@ -1,17 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: helgayli <helgayli@student.42abudhabi.a    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/07 04:29:39 by helgayli          #+#    #+#             */
+/*   Updated: 2023/08/07 04:29:40 by helgayli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // #include <stdio.h>
 // #include <ctype.h>
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-        if (c >= 'A' && c <= 'Z')
-        {
-                c += 32;
-                return c;
-        }
-        else
-        {
-                return c;
-        }
+	if (c >= 'A' && c <= 'Z')
+	{
+		c += 32;
+		return (c);
+	}
+	else
+	{
+		return (c);
+	}
 }
 
 // int main(void)

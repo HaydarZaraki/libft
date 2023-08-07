@@ -6,7 +6,7 @@
 /*   By: helgayli <helgayli@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 23:26:15 by helgayli          #+#    #+#             */
-/*   Updated: 2023/08/06 23:30:29 by helgayli         ###   ########.fr       */
+/*   Updated: 2023/08/07 00:33:12 by helgayli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	first = joined;
 	if (joined != 0)
 	{
-		join_op(s1, joined, s2);
+		join_op((char *)s1, joined, (char *)s2);
 		return (first);
 	}
 	return (0);

@@ -6,11 +6,19 @@
 /*   By: helgayli <helgayli@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 22:13:40 by helgayli          #+#    #+#             */
-/*   Updated: 2023/08/06 22:17:46 by helgayli         ###   ########.fr       */
+/*   Updated: 2023/08/07 04:46:15 by helgayli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	*delete_and_clear(t_list *new_list,
+		void (*del)(void *), void *new_content)
+{
+	del(new_content);
+	ft_lstclear(&new_list, del);
+	return (NULL);
+}
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -33,11 +41,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		}
 		new_node = ft_lstnew(new_content);
 		if (!new_node)
-		{
-			del(new_content);
-			ft_lstclear(&new_list, del);
-			return (NULL);
-		}
+			delete_and_clear(new_list, del, new_content);
 		ft_lstadd_back(&new_list, new_node);
 		current = current->next;
 	}
