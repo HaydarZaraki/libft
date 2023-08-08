@@ -6,13 +6,15 @@
 /*   By: helgayli <helgayli@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 04:11:32 by helgayli          #+#    #+#             */
-/*   Updated: 2023/08/07 04:11:34 by helgayli         ###   ########.fr       */
+/*   Updated: 2023/08/08 01:11:05 by helgayli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (*str)

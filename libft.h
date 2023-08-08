@@ -6,7 +6,7 @@
 /*   By: helgayli <helgayli@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 04:37:46 by helgayli          #+#    #+#             */
-/*   Updated: 2023/08/07 04:41:53 by helgayli         ###   ########.fr       */
+/*   Updated: 2023/08/08 01:32:23 by helgayli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-int				ft_strlen(char *str);
+size_t			ft_strlen(const char *str);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
 int				ft_isascii(int c);
 int				ft_isdigit(int c);
 int				ft_isprint(int c);
 int				ft_tolower(int c);
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
+size_t			ft_strlcpy(char *dest, char *src, size_t size);
+size_t			ft_strlcat(char *dest, char *src, size_t size);
 int				ft_toupper(int c);
 int				ft_atoi(const char *str);
 void			ft_bzero(void *str, size_t n);
